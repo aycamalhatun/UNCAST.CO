@@ -434,6 +434,116 @@
   .contact-meta a{border-bottom:1px solid transparent;transition:border-color .3s;}
   .contact-meta a:hover{border-color:var(--graphite-dark);}
 
+  /* ---------- PRICING ---------- */
+  .pricing{background:var(--bone-2);}
+  .pricing-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);
+    gap:1px;background:var(--line-light);
+    margin-top:2px;
+  }
+  .pricing-card{
+    background:var(--bone-2);
+    padding:56px 40px;
+    display:flex;flex-direction:column;
+  }
+  .pricing-card.featured{background:var(--ink);color:var(--bone);}
+  .pricing-card .pc-eyebrow{margin-bottom:24px;}
+  .pricing-card.featured .pc-eyebrow{color:var(--stone);}
+  .pricing-card h3{font-size:clamp(24px,2.6vw,32px);margin-bottom:14px;}
+  .pricing-card .pc-price{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(30px,3.4vw,42px);
+    margin-bottom:22px;
+  }
+  .pricing-card .pc-price span{font-size:13px;font-family:'Inter',sans-serif;color:var(--graphite-dark);letter-spacing:0;}
+  .pricing-card.featured .pc-price span{color:var(--stone);}
+  .pricing-card p.pc-desc{font-size:14px;line-height:1.7;color:var(--graphite-dark);flex-grow:0;margin-bottom:28px;}
+  .pricing-card.featured p.pc-desc{color:var(--stone);}
+  .pricing-card ul{list-style:none;margin-bottom:32px;flex-grow:1;}
+  .pricing-card ul li{
+    font-size:13px;padding:9px 0;
+    border-top:1px solid var(--line-light);
+    color:#2a2825;
+  }
+  .pricing-card.featured ul li{border-top-color:var(--line-dark);color:var(--bone);}
+  .pricing-card ul li:last-child{border-bottom:1px solid var(--line-light);}
+  .pricing-card.featured ul li:last-child{border-bottom-color:var(--line-dark);}
+  .pricing-card .pc-cta{font-size:12px;letter-spacing:0.14em;text-transform:uppercase;border-bottom:1px solid var(--line-light);padding-bottom:8px;width:fit-content;transition:border-color 0.3s var(--ease);}
+  .pricing-card.featured .pc-cta{border-bottom-color:var(--line-dark);}
+  .pricing-card .pc-cta:hover{border-color:var(--ink);}
+  .pricing-card.featured .pc-cta:hover{border-color:var(--bone);}
+  .pricing-note{
+    text-align:center;font-size:13px;color:var(--graphite-dark);
+    padding:40px 0 90px;
+  }
+  .pricing-note a{border-bottom:1px solid var(--graphite);}
+
+  /* ---------- PROOF STRIP ---------- */
+  .proof{background:var(--ink);color:var(--bone);padding:90px 0;}
+  .proof-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);
+    gap:40px;text-align:center;
+  }
+  .proof-grid div b{
+    display:block;font-family:'Cormorant Garamond',serif;
+    font-size:clamp(32px,4vw,52px);font-weight:400;margin-bottom:10px;
+  }
+  .proof-grid div span{font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--stone);}
+
+  /* ---------- FAQ ---------- */
+  .faq{background:var(--bone);}
+  .faq-list{list-style:none;max-width:840px;}
+  .faq-item{border-bottom:1px solid var(--line-light);}
+  .faq-item summary{
+    padding:28px 0;font-family:'Cormorant Garamond',serif;
+    font-size:clamp(18px,2vw,24px);cursor:pointer;
+    display:flex;justify-content:space-between;align-items:center;gap:20px;
+    list-style:none;
+  }
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::after{
+    content:'+';font-family:'Inter',sans-serif;font-size:22px;color:var(--graphite);
+    transition:transform 0.35s var(--ease);flex-shrink:0;
+  }
+  .faq-item[open] summary::after{transform:rotate(45deg);}
+  .faq-item p{font-size:14.5px;line-height:1.75;color:var(--graphite-dark);max-width:60ch;padding-bottom:28px;}
+
+  /* ---------- BRIEF FORM ---------- */
+  .brief-head{max-width:560px;margin:0 auto 64px;text-align:center;}
+  .brief-head .eyebrow{display:block;margin-bottom:20px;}
+  .brief-actions{display:flex;gap:24px;margin-top:8px;flex-wrap:wrap;justify-content:center;}
+  .brief-actions .cta{color:var(--ink);border-bottom:1px solid var(--line-light);}
+  .brief-actions .cta:hover{border-color:var(--ink);}
+  form.brief-form{
+    display:grid;grid-template-columns:1fr 1fr;gap:32px 48px;
+    max-width:920px;margin:0 auto;text-align:left;
+  }
+  .brief-form .field{display:flex;flex-direction:column;gap:10px;}
+  .brief-form .field.full{grid-column:1/-1;}
+  .brief-form label{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--graphite);}
+  .brief-form input, .brief-form select, .brief-form textarea{
+    background:transparent;border:none;border-bottom:1px solid var(--line-light);
+    color:var(--ink);font-family:'Inter',sans-serif;font-size:15px;
+    padding:8px 0;outline:none;transition:border-color 0.3s var(--ease);
+  }
+  .brief-form input::placeholder, .brief-form textarea::placeholder{color:var(--stone);}
+  .brief-form input:focus, .brief-form select:focus, .brief-form textarea:focus{border-color:var(--ink);}
+  .brief-form textarea{resize:none;min-height:64px;}
+  .brief-submit{
+    grid-column:1/-1;
+    display:inline-flex;align-items:center;gap:14px;
+    background:var(--ink);color:var(--bone);
+    border:none;padding:18px 32px;
+    font-size:12px;letter-spacing:0.16em;text-transform:uppercase;
+    cursor:pointer;width:fit-content;margin:8px auto 0;
+    transition:background 0.35s var(--ease);
+  }
+  .brief-submit:hover{background:var(--graphite-dark);}
+  .brief-note{font-size:12.5px;color:var(--graphite);margin-top:24px;max-width:60ch;text-align:center;margin-left:auto;margin-right:auto;}
+  .brief-success{display:none;font-family:'Cormorant Garamond',serif;font-size:20px;padding:20px 0;text-align:center;}
+  .brief-success.show{display:block;}
+  form.brief-form.hide{display:none;}
+
   footer{
     border-top:1px solid var(--line-light);
     padding:32px 0;
@@ -457,6 +567,11 @@
     .manifesto{padding:110px 0 130px;}
     .contact{padding:110px 0 60px;}
     .stills-grid{grid-template-columns:repeat(3,1fr);}
+    .pricing-grid{grid-template-columns:1fr;}
+    .proof-grid{grid-template-columns:1fr 1fr;gap:32px 20px;}
+    .proof{padding:64px 0;}
+    form.brief-form{grid-template-columns:1fr;}
+    .brief-actions{flex-direction:column;align-items:center;}
   }
   @media (prefers-reduced-motion: reduce){
     *{animation-duration:0.01ms !important;transition-duration:0.01ms !important;}
@@ -472,6 +587,7 @@
   <ul class="nav-links">
     <li><a href="#work">Work</a></li>
     <li><a href="#services">Services</a></li>
+    <li><a href="#pricing">Pricing</a></li>
     <li><a href="#manifesto">Studio</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -721,6 +837,65 @@
   </div>
 </section>
 
+<!-- PRICING -->
+<section class="pricing" id="pricing" aria-label="Pricing — Single Campaign, Brand System, Monthly Retainer">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2>Ways to Work Together</h2>
+      <p class="desc">Three ways in, depending on how much of your brand's visual world we're building.</p>
+    </div>
+  </div>
+  <div class="pricing-grid">
+    <div class="pricing-card reveal">
+      <span class="eyebrow pc-eyebrow">One-Off</span>
+      <h3>Single Campaign</h3>
+      <div class="pc-price">$300<span> starting</span></div>
+      <p class="pc-desc">One concept, one world. A hero visual and social set for a single product or launch.</p>
+      <ul>
+        <li>Hero campaign visual</li>
+        <li>Social campaign set</li>
+        <li>Delivered in days</li>
+      </ul>
+      <a href="#brief" class="pc-cta">Start a Campaign →</a>
+    </div>
+    <div class="pricing-card featured reveal">
+      <span class="eyebrow pc-eyebrow">Most Requested</span>
+      <h3>Brand System</h3>
+      <div class="pc-price">$2,000<span> starting</span></div>
+      <p class="pc-desc">A full visual language across every touchpoint — built to hold consistency through a launch cycle.</p>
+      <ul>
+        <li>Campaign + product visuals</li>
+        <li>Social & ad creative set</li>
+        <li>Full visual system & guidelines</li>
+      </ul>
+      <a href="#brief" class="pc-cta">Build a System →</a>
+    </div>
+    <div class="pricing-card reveal">
+      <span class="eyebrow pc-eyebrow">Ongoing</span>
+      <h3>Monthly Retainer</h3>
+      <div class="pc-price">$1,000<span>/mo starting</span></div>
+      <p class="pc-desc">An ongoing creative partnership — concepts and visuals produced every month, like a creative director on call.</p>
+      <ul>
+        <li>2 campaign concepts / month</li>
+        <li>Ongoing social assets</li>
+        <li>Priority turnaround</li>
+      </ul>
+      <a href="#brief" class="pc-cta">Start a Partnership →</a>
+    </div>
+  </div>
+  <p class="pricing-note reveal">Every brand's scope is different — <a href="#brief">send a brief</a> and we'll recommend the right fit.</p>
+</section>
+
+<!-- PROOF -->
+<section class="proof" aria-label="Studio track record">
+  <div class="wrap proof-grid">
+    <div class="reveal"><b>40+</b><span>Campaign Concepts</span></div>
+    <div class="reveal"><b>4</b><span>Categories — Beauty, Skin, Fragrance, Prestige</span></div>
+    <div class="reveal"><b>Days</b><span>Not Weeks, to Delivery</span></div>
+    <div class="reveal"><b>1</b><span>Creative Director, Every Project</span></div>
+  </div>
+</section>
+
 <!-- MANIFESTO -->
 <section class="manifesto" id="manifesto" aria-label="Studio manifesto — AI does not replace creativity, it removes production limitations">
   <div class="wrap">
@@ -735,11 +910,102 @@
   </div>
 </section>
 
-<!-- CONTACT -->
-<section class="contact" id="contact" aria-label="Contact UNCAST.CO">
+<!-- FAQ -->
+<section class="faq" id="faq" aria-label="Frequently asked questions">
   <div class="wrap">
-    <h2 class="reveal">Let's create something <em>unforgettable.</em></h2>
-    <a href="mailto:hello@uncast.co" class="contact-cta reveal">hello@uncast.co <span>↗</span></a>
+    <div class="section-head reveal">
+      <h2>Questions</h2>
+      <p class="desc">What clients usually ask before starting.</p>
+    </div>
+    <ul class="faq-list">
+      <li class="faq-item reveal">
+        <details>
+          <summary>Is this really AI, or retouched photography?</summary>
+          <p>Every frame is AI-generated and directed, start to finish — no physical shoot, no stock imagery. Direction, styling and grading are done by hand, the production is AI.</p>
+        </details>
+      </li>
+      <li class="faq-item reveal">
+        <details>
+          <summary>Will it look like a template, or match my brand?</summary>
+          <p>Direction is built around your brand's specific world — color, texture, mood, product — not a reused style pulled off the shelf.</p>
+        </details>
+      </li>
+      <li class="faq-item reveal">
+        <details>
+          <summary>How fast is delivery?</summary>
+          <p>Single campaigns typically ship in 5–10 days depending on scope. Brand Systems and retainers run on a schedule we set together at kickoff.</p>
+        </details>
+      </li>
+      <li class="faq-item reveal">
+        <details>
+          <summary>Can I request revisions?</summary>
+          <p>Yes — unlimited exploration is part of the process, not a paid add-on. We iterate until the direction is right.</p>
+        </details>
+      </li>
+      <li class="faq-item reveal">
+        <details>
+          <summary>What if I'm not sure which package fits?</summary>
+          <p>Send a brief or book a call — we'll look at your brand and recommend the right scope before anything is agreed.</p>
+        </details>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact brief" id="contact" aria-label="Contact UNCAST.CO">
+  <div class="wrap">
+    <div class="brief-head reveal">
+      <span class="eyebrow">Start a Project</span>
+      <h2>Let's create something <em>unforgettable.</em></h2>
+      <div class="brief-actions">
+        <!-- Replace # with your real Calendly link, e.g. https://calendly.com/uncastco/intro-call -->
+        <a href="#" class="cta" target="_blank" rel="noopener">Book a 20-min Call <span class="arrow">→</span></a>
+        <a href="mailto:hello@uncast.co" class="cta">hello@uncast.co <span class="arrow">↗</span></a>
+      </div>
+    </div>
+
+    <form class="brief-form reveal" id="briefForm">
+      <div class="field">
+        <label for="bf-brand">Brand Name</label>
+        <input type="text" id="bf-brand" name="brand" placeholder="Your brand" required>
+      </div>
+      <div class="field">
+        <label for="bf-site">Website / Instagram</label>
+        <input type="text" id="bf-site" name="site" placeholder="@yourbrand or url">
+      </div>
+      <div class="field">
+        <label for="bf-project">Project Type</label>
+        <select id="bf-project" name="project">
+          <option>Single Campaign</option>
+          <option>Brand System</option>
+          <option>Monthly Retainer</option>
+          <option>Not sure yet</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="bf-budget">Budget Range</label>
+        <select id="bf-budget" name="budget">
+          <option>Under $500</option>
+          <option>$500 – $2,000</option>
+          <option>$2,000 – $5,000</option>
+          <option>$5,000+</option>
+        </select>
+      </div>
+      <div class="field full">
+        <label for="bf-message">Tell Us About Your Brand</label>
+        <textarea id="bf-message" name="message" placeholder="What are you launching, and when?"></textarea>
+      </div>
+      <div class="field full">
+        <label for="bf-email">Email</label>
+        <input type="email" id="bf-email" name="email" placeholder="you@brand.com" required>
+      </div>
+      <button type="submit" class="brief-submit">Send Brief <span class="arrow">→</span></button>
+    </form>
+    <p class="brief-success" id="briefSuccess">Thank you — we'll be in touch within 48 hours.</p>
+
+    <p class="brief-note reveal">Prefer to talk first? <a href="#" style="border-bottom:1px solid var(--graphite)">Book a 20-min call</a> and skip the form.</p>
+
     <div class="contact-meta reveal">
       <div><b>Instagram</b><a href="#">@uncast.co</a></div>
       <div><b>LinkedIn</b><a href="#">UNCAST.CO</a></div>
@@ -785,6 +1051,21 @@
       const y = Math.min(Math.max(e.clientY, 240), window.innerHeight-240);
       preview.style.top = y + 'px';
       preview.style.transform = 'translateY(-50%) scale(1)';
+    });
+  }
+
+  // brief form — front-end only placeholder.
+  // IMPORTANT: this does not send data anywhere yet. Connect it to Formspree,
+  // Netlify Forms, or your own endpoint before going live (see note below).
+  const briefForm = document.getElementById('briefForm');
+  const briefSuccess = document.getElementById('briefSuccess');
+  if(briefForm){
+    briefForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      // TODO: replace this block with a real submission, e.g.:
+      // fetch('https://formspree.io/f/YOUR_FORM_ID', { method:'POST', body:new FormData(briefForm), headers:{Accept:'application/json'} })
+      briefForm.classList.add('hide');
+      briefSuccess.classList.add('show');
     });
   }
 
